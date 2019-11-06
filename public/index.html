@@ -1,29 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-<title>Title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
 </head>
+
 <body>
-<div class="container navDiv">
-    <div class="row">
-        <div class="col-lg-12">
-            <nav class="navbar navbar-light bg-light">
-                <a class="navbar-brand" href="#">
-                  <img src="./assets/images/space.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                  Dino Time!
-                </a>
-              </nav>
+    <div class="container navDiv">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-light bg-light">
+                    <a class="navbar-brand" href="#">
+                        <img src="./assets/images/space.png" width="30" height="30" class="d-inline-block align-top"
+                            alt="">
+                        Dino Time!
+                    </a>
+                </nav>
+            </div>
         </div>
     </div>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <div class="container rowTwo">
+        <div class="row">
+            <div class="col-lg-6.5">
+                <canvas id="canvas" width="650" height="500" style="background-color: black;"></canvas>
+            </div>
+            <div class="col-lg-.5"></div>
+            <div class="col-lg-5">
+                <div class="card text-white bg-dark" style="margin-bottom: 5px;">
+                    <div class="card-header">Leaderboards</div>
+                    <div class="card-body p-0">
+                        <table class="table table-striped table-bordered table-dark">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Position</th>
+                                    <th scope="col">Player</th>
+                                    <th scope="col">Score</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table-body">
+                                <tr class="display">
+                                    <td id="place">#1</td>
+                                    <td id="player">Placeholder</td>
+                                    <td id="score">150</td>
+                                </tr>
+                                <tr class="display">
+                                    <td id="place">#2</td>
+                                    <td id="player">Placeholder</td>
+                                    <td id="score">150</td>
+                                </tr>
+                                <tr class="display">
+                                    <td id="place">#3</td>
+                                    <td id="player">Placeholder</td>
+                                    <td id="score">150</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="chatbox">
+                        <div class="card">
+                                <div class="card-body">
+                                  <h5 class="card-title">Chat Box</h5>
+                                  <p class="card-text"><strong>Player One: </strong>You suck! Uninstall the game!</p>
+                                  <p class="card-text"><strong>Player Two: </strong>Press Alt + F4 to win lol</p>
+                                  <p class="card-text"><strong>Player Three: </strong>I don't even know what I'm doing</p>
+                                </div>
+                                <form>
+  <div class="form-group">
+    <input type="input" class="form-control" id="chatInput" aria-describedby="chatHelp" placeholder="Type a message">
+                              </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
+
 </html>
