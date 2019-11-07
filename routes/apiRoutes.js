@@ -1,36 +1,38 @@
-var router = require('express').Router();
-var connection = require('../db/connection');
+var db = require("../models");
 
-router.get('/api/leaderboards', function (req, res) {
-  connection.query("SELECT * FROM leaderboards", function (err, result) {
-    if (err) throw err;
+module.exports = function (app) {
 
-    res.json(result);
-  });
-});
 
-// POST USER DATA
-router.post('/api/leaderboards', function (req, res) {
-  connection.query(
-    'INSERT INTO leaderboards SET ?', req.body,
-    function (err, result) {
-      if (err) throw err;
-      res.json(result);
+  // GET route for pulling all leaderboard data
+  app.get("/api/leaderboards", function (req, res) {
+    db.Leaderboards.findAll({}).then(function (dbLeaderboards) {
+      res.json(dbLeaderboards);
     });
-});
-
-
-router.put('/api/leaderboards/:id', function (req, res) {
-  connection.query(
-    'UPDATE leaderboards SET ? WHERE id = ?', [req.body, req.params.id], function (err, result) {
-      if (err) {
-        return res.status(500).end();
-      }
-      else if (result.changedRows === 0) {
-        return res.status(404).end();
-      }
-      console.log(result);
-      res.status(200).end();
   });
-});
-module.exports = router;
+
+  // POST route for saving new leaderboards
+  app.post("/api/leaderboards", function (req, res) {
+    console.log(req.body);
+
+
+    db.Leaderboards.create({
+      player: req.body.player,
+      score: req.body.score
+    }).then(function (dbLeaderboards) {
+      res.json(dbLeaderboards);
+    });
+  });
+
+  // PUT route for updating leaderboard scores
+  app.put("/api/Leaderboards/:id", function (req, res) {
+    db.Leaderboards.update({
+        score: req.body.score
+      }, {
+        where: req.params.id
+      })
+      .then(function (dbLeaderboards) {
+        res.json(dbLeaderboards)
+      })
+      .catch(error);
+  });
+};
