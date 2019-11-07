@@ -1,11 +1,16 @@
 var db = require("../models");
+var sequelize = require("sequelize");
 
 module.exports = function (app) {
 
 
   // GET route for pulling all leaderboard data
   app.get("/api/leaderboards", function (req, res) {
-    db.Leaderboards.findAll({}).then(function (dbLeaderboards) {
+    db.Leaderboards.findAll({
+      order: [
+        ['score', 'DESC']
+      ]
+    }).then(function (dbLeaderboards) {
       res.json(dbLeaderboards);
     });
   });
