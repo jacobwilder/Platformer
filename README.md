@@ -4,16 +4,16 @@ Dinos in Space
 
 ![image](https://steemitimages.com/p/cyxkESqYz3dhcAZnfueBbAJYLgwJQyDNA7TWHyu6zQsVykaLBuHQpKvXgrAGePUXa4advvFWt1K5NBQeKDbvbH74DZrp9f7zJxtMES6kzMMVwaSKv2UJ87BWNtPVkndChqG?format=match&mode=fit&width=640)
 
-## Getting Started
+## Description
 
 Dinos in Space is a side-scroller game where the player controls a dinosaur lost in space after a meteor crashed into Earth and killed the rest of it's species. To traverse through space, the player must keep the dinosaur suspended in the air by jumping (arrow keys) through various obstacles it encounters. When the dinosaur inevitably dies, the player is asked to type in their username which will then add their player name/score into a database represented by the live leaderboards.
 
-### Prerequisites/Recommended Requirements
+## Prerequisites/Recommended Requirements
 
--CPU: Intel Core i9 9900k @ 4.2Ghz
--GPU: NVidia Titan RTX
--RAM: ~32GB DDR5
--STORAGE: 2TB SSD
+**CPU:** Intel Core i9 9900k @ 4.2Ghz
+**GPU:** NVidia Titan RTX
+**RAM:** ~32GB DDR5
+**STORAGE:** 2TB SSD
 
 
 *This game will not run well on computers manufactured circa 1985.*
