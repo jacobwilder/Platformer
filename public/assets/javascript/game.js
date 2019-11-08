@@ -7,11 +7,11 @@ var fg = new Image();
 var pipeNorth = new Image();
 var pipeSouth = new Image();
 
-dino.src = "assets/images/dino1.gif";
+dino.src = "assets/images/dino2.png";
 bg.src = "assets/images/zy85SqV.gif";
 fg.src = "";
-pipeNorth.src = "assets/images/pipe.png";
-pipeSouth.src = "assets/images/pipe2.png";
+pipeNorth.src = "assets/images/dinoegg.png";
+pipeSouth.src = "assets/images/dinoegg2.png";
 
 // some variables
 
@@ -94,7 +94,7 @@ function draw() {
 
   bY += gravity;
 
-  ctx.fillStyle = "#000";
+  ctx.fillStyle = "#FFFFFF";
   ctx.font = "20px Verdana";
   ctx.fillText("Score : " + score, 10, cvs.height - 20);
 
