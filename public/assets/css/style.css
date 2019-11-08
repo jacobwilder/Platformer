@@ -3,3 +3,7 @@
   max-width: 400px;
   overflow-y: scroll;
 }
+
+#canvas {
+  background: url('https://im2.ezgif.com/tmp/ezgif-2-06ad090ef174.gif')
+}
