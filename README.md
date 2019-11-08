@@ -1,37 +1,8 @@
-# Platformer
----
-
-## What is Platformer?
-
-see [Platformer](https://github.com/jacobwilder/Platformer)
-
-> Platformer is a game.
-
-
----
-
-## Usage
-
-1. HTML5.
-2. CSS3.
-3. Bootstrap.
-4. JavaScript.
-5. Nodejs.
-
----
-
-## Made by:
-
-- [Jake](https://github.com/jacobwilder)
-- [Kate](https://github.com/jacobwilder)
-- [Chris](https://github.com/jacobwilder)
-- [Kevin](https://github.com/jacobwilder)
-
 # Dinos in Space
 
 Dinos in Space
 
-![image](https://raw.githubusercontent.com/jacobwilder/Platformer/assets/images/SpaceDino.png)
+![image](https://steemitimages.com/p/cyxkESqYz3dhcAZnfueBbAJYLgwJQyDNA7TWHyu6zQsVykaLBuHQpKvXgrAGePUXa4advvFWt1K5NBQeKDbvbH74DZrp9f7zJxtMES6kzMMVwaSKv2UJ87BWNtPVkndChqG?format=match&mode=fit&width=640)
 
 ## Getting Started
 
