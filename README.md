@@ -10,10 +10,10 @@ Dinos in Space is a side-scroller game where the player controls a dinosaur lost
 
 ### Prerequisites/Recommended Requirements
 
-CPU: Intel Core i9 9900k @ 4.2Ghz
-GPU: NVidia Titan RTX
-RAM: ~32GB DDR5
-STORAGE: 2TB SSD
+*CPU: Intel Core i9 9900k @ 4.2Ghz
+*GPU: NVidia Titan RTX
+*RAM: ~32GB DDR5
+*STORAGE: 2TB SSD
 
 
 *This game will not run well on computers manufactured circa 1985.*
