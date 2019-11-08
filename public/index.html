@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
     <link type="text/css" href="../public/assets/css/style.css">
     <title>Title</title>
 </head>
@@ -43,46 +44,46 @@
                                     <th scope="col">Score</th>
                                 </tr>
                             </thead>
-                            <tbody id="table-body">
-                                <tr class="display">
-                                    <td id="place">#1</td>
-                                    <td id="player">Placeholder</td>
-                                    <td id="score">150</td>
-                                </tr>
-                                <tr class="display">
-                                    <td id="place">#2</td>
-                                    <td id="player">Placeholder</td>
-                                    <td id="score">150</td>
-                                </tr>
-                                <tr class="display">
-                                    <td id="place">#3</td>
-                                    <td id="player">Placeholder</td>
-                                    <td id="score">150</td>
-                                </tr>
+                            <tbody class="table-body" id="score">
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div class="chatbox">
-                        <div class="card">
-                                <div class="card-body">
-                                  <h5 class="card-title">Chat Box</h5>
-                                  <p class="card-text"><strong>Player One: </strong>You suck! Uninstall the game!</p>
-                                  <p class="card-text"><strong>Player Two: </strong>Press Alt + F4 to win lol</p>
-                                  <p class="card-text"><strong>Player Three: </strong>I don't even know what I'm doing</p>
-                                </div>
-                                <form>
-  <div class="form-group">
-    <input type="input" class="form-control" id="chatInput" aria-describedby="chatHelp" placeholder="Type a message">
-                              </div>
+
+                <!--Beginning of Chat-->
+                <div id="app">
+                    <div v-if="state == 0">
+                        <h3>Welcome! Please choose a username.</h3>
+                        <form @submit.prevent="setUsername">
+                            <input type="text" placeholder="Username..." v-model:value="username" />
+                            <input type="submit" value="Join" />
+                        </form>
+                        <button @click="continueWithoutUsername">Join as a Guest</button>
+                    </div>
+                    <div v-if="state == 1">
+                        <ul id="chatbox">
+                            <li v-for="message in messages">
+                                <b>{{ message.user }}:</b> {{ message.message }}
+                            </li>
+                        </ul>
+                        <form @submit.prevent="sendMessage">
+                            <input type="text" placeholder="Message..." v-model:value="message" />
+                            <input type="submit" value="Send" />
+                        </form>
+                    </div>
                 </div>
+                <!-- End of Chat -->
+
             </div>
         </div>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="assets/javascript/chat.js"></script>
+        <!-- <script src="assets/javascript/game.js"></script> -->
+        <script src="view.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
 </body>
 
 </html>

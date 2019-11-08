@@ -1,24 +1,25 @@
 {
-  "development": {
-    "username": "root",
-    "password": "Olive1989",
-    "database": "leaderboards_db",
-    "host": "127.0.0.1",
-    "port": 3306,
-    "dialect": "mysql"
-  },
-  "test": {
-    "username": "root",
-    "password": "Olive1989",
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "username": "root",
-    "password": "Olive1989",
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "development": {
+      "username": "root",
+      "password": "26Gamers8!",
+      "database": "leaderboards_db",
+      "host": "127.0.0.1",
+      "port": 3306,
+      "dialect": "mysql"
+    },
+    "test": {
+      "username": "root",
+      "password": "26Gamers8!",
+      "database": "database_test",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "production": {
+      "username": "root",
+      "password": "26Gamers8!",
+      "database": "database_production",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    }
   }
 }
