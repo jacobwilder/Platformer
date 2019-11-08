@@ -12,3 +12,4 @@ FROM
     leaderboards;
     
 SELECT * FROM leaderboards;
+
