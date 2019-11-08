@@ -25,16 +25,16 @@ This project is deployed through [Heroku](https://www.heroku.com/home/) using [J
 
 ## Built With
 
-* [HTML5](http://www.dropwizard.io/1.0.2/docs/) - Web framework
-* [CSS3](https://maven.apache.org/) - HTML styling
-* [Bootstrap](https://getbootstrap.com/) - CSS framework
-* [JavaScript (ES8)](https://rometools.github.io/rome/) - Framework logic
-* [MySQL Database](https://www.mysql.com/) - Database Management System
-* [Socket.io](https://socket.io/) - JavaScript library/realtime engine for chat
-*[Vue.JS](https://vuejs.org/) - JavaScript library for UI/Single-page applications
-*[Sequelize](https://sequelize.org/) - Promise-based ORM for MySQL
-*[Node.JS](https://nodejs.org/en/) - JavaScript runtime environment
-*[Express](https://expressjs.com/) - Web framework for Node.JS
+- [HTML5](http://www.dropwizard.io/1.0.2/docs/) - Web framework
+- [CSS3](https://maven.apache.org/) - HTML styling
+- [Bootstrap](https://getbootstrap.com/) - CSS framework
+- [JavaScript (ES8)](https://rometools.github.io/rome/) - Framework logic
+- [MySQL Database](https://www.mysql.com/) - Database Management System
+- [Socket.io](https://socket.io/) - JavaScript library/realtime engine for chat
+- [Vue.JS](https://vuejs.org/) - JavaScript library for UI/Single-page applications
+- [Sequelize](https://sequelize.org/) - Promise-based ORM for MySQL
+- [Node.JS](https://nodejs.org/en/) - JavaScript runtime environment
+- [Express](https://expressjs.com/) - Web framework for Node.JS
 
 ## Contributors
 
