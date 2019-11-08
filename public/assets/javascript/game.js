@@ -10,8 +10,8 @@ var pipeSouth = new Image();
 dino.src = "assets/images/dino2.png";
 bg.src = "assets/images/zy85SqV.gif";
 fg.src = "";
-pipeNorth.src = "assets/images/dinoegg.png";
-pipeSouth.src = "assets/images/dinoegg2.png";
+pipeNorth.src = "assets/images/pipenorth.png";
+pipeSouth.src = "assets/images/pipesouth.png";
 
 // some variables
 
@@ -101,4 +101,4 @@ function draw() {
   requestAnimationFrame(draw);
 }
 
-draw();
+$("#start").on("click", draw);
