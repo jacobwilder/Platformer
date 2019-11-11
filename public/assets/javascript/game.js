@@ -33,7 +33,7 @@ var fly = new Audio();
 var scor = new Audio();
 
 fly.src = "assets/sounds/flap.mp3";
-scor.src = "assets/sounds/scoreup.mp3";
+scor.src = "assets/sounds/scoreup.wav";
 
 // on key down
 
