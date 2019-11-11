@@ -1,8 +1,8 @@
 INSERT INTO leaderboards (player, score)
 VALUES
-("XxVapeGod420xX", 20),
-("KevinTheDude", 35),
-("UkrainianKatya", 80);
+("XxVapeGod420xX", 5),
+("KevinTheDude", 10),
+("UkrainianKatya", 3);
 
 SELECT 
     player, 

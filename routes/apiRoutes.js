@@ -29,11 +29,11 @@ module.exports = function (app) {
   });
 
   // PUT route for updating leaderboard scores
-  app.put("/api/Leaderboards/:id", function (req, res) {
+  app.put("/api/leaderboards", function (req, res) {
     db.Leaderboards.update({
         score: req.body.score
       }, {
-        where: req.params.id
+        where: {player: req.body.player}
       })
       .then(function (dbLeaderboards) {
         res.json(dbLeaderboards)
