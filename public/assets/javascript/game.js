@@ -39,9 +39,12 @@ scor.src = "assets/sounds/scoreup.mp3";
 
 document.addEventListener("keydown", moveUp);
 
-function moveUp() {
+function moveUp(event) {
+  var x = event.keyCode;
+  if (x == 38) {
   bY -= 35;
   fly.play();
+  }
 }
 
 // pipe coordinates
@@ -60,13 +63,12 @@ function draw() {
 
   for (var i = 0; i < pipe.length; i++) {
     constant = pipeNorth.height + gap;
-    console.log(constant);
     ctx.drawImage(pipeNorth, pipe[i].x, pipe[i].y);
     ctx.drawImage(pipeSouth, pipe[i].x, pipe[i].y + constant);
 
     pipe[i].x--;
 
-    if (pipe[i].x == 125) {
+    if (pipe[i].x == cvs.width - 325) {
       pipe.push({
         x: cvs.width,
         y: Math.floor(Math.random() * pipeNorth.height) - pipeNorth.height
@@ -98,6 +100,7 @@ function draw() {
 
   ctx.fillStyle = "#ffffff";
   ctx.font = "20px Verdana";
+  ctx.fillText("Player : ", 10, cvs.height - 40);
   ctx.fillText("Score : " + score, 10, cvs.height - 20);
 
   requestAnimationFrame(draw);
