@@ -1,24 +1,26 @@
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
 
-var dino = new Image();
+// load images
+
+var bird = new Image();
 var bg = new Image();
 var fg = new Image();
 var pipeNorth = new Image();
 var pipeSouth = new Image();
 
-dino.src = "assets/images/dino2.png";
-bg.src = "assets/images/zy85SqV.gif";
-fg.src = "";
+bird.src = "assets/images/dino1.png";
+bg.src = "assets/images/ozp.gif";
+fg.src = "assets/images/fg.png";
 pipeNorth.src = "assets/images/pipenorth.png";
 pipeSouth.src = "assets/images/pipesouth.png";
 
 // some variables
 
-var gap = 85;
-var constant = pipeNorth.height + gap;
+var gap = Math.floor(Math.random() * (150 - 100) + 100);
+var constant;
 
-var bX = 50;
+var bX = 10;
 var bY = 150;
 
 var gravity = 1.5;
@@ -30,15 +32,15 @@ var score = 0;
 var fly = new Audio();
 var scor = new Audio();
 
-fly.src = "";
-scor.src = "";
+fly.src = "assets/sounds/flap.mp3";
+scor.src = "assets/sounds/scoreup.mp3";
 
 // on key down
 
 document.addEventListener("keydown", moveUp);
 
 function moveUp() {
-  bY -= 25;
+  bY -= 35;
   fly.play();
 }
 
@@ -54,13 +56,16 @@ pipe[0] = {
 // draw images
 
 function draw() {
-  ctx.drawImage(bg, 0, 0);
+  ctx.drawImage(bg, 0, 0, 650, 512);
 
   for (var i = 0; i < pipe.length; i++) {
+    constant = pipeNorth.height + gap;
+    console.log(constant);
     ctx.drawImage(pipeNorth, pipe[i].x, pipe[i].y);
-    ctx.drawImage(pipeNorth, pipe[i].x, pipe[i].y + constant);
+    ctx.drawImage(pipeSouth, pipe[i].x, pipe[i].y + constant);
 
     pipe[i].x--;
+
     if (pipe[i].x == 125) {
       pipe.push({
         x: cvs.width,
@@ -71,11 +76,11 @@ function draw() {
     // detect collision
 
     if (
-      (bX + dino.width >= pipe[i].x &&
+      (bX + bird.width >= pipe[i].x &&
         bX <= pipe[i].x + pipeNorth.width &&
         (bY <= pipe[i].y + pipeNorth.height ||
-          bY + dino.height >= pipe[i].y + constant)) ||
-      bY + dino.height >= cvs.height - fg.height
+          bY + bird.height >= pipe[i].y + constant)) ||
+      bY + bird.height >= cvs.height
     ) {
       location.reload(); // reload the page
     }
@@ -86,19 +91,16 @@ function draw() {
     }
   }
 
-  // ctx.drawImage(pipeNorth, 100, 0);
-  // ctx.drawImage(pipeSouth, 100, 0 + constant);
 
-  ctx.drawImage(fg, 0, cvs.height - fg.height);
-  ctx.drawImage(dino, bX, bY);
+  ctx.drawImage(bird, bX, bY);
 
   bY += gravity;
 
-  ctx.fillStyle = "#FFFFFF";
+  ctx.fillStyle = "#ffffff";
   ctx.font = "20px Verdana";
   ctx.fillText("Score : " + score, 10, cvs.height - 20);
 
   requestAnimationFrame(draw);
 }
 
-$("#start").on("click", draw);
+draw();
