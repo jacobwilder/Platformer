@@ -1,7 +1,7 @@
 $(document).ready(function () {
     var $newChatInput = $("#chatInput");
     var $scoreContainer = $("#score");
-    var $playerInput = $("#playerName");
+    var $playerInput = $("#player").val();
     var $playerScore = $("#playerScore");
 
     // $(document).on("click", "#submitChat", submitChat);
@@ -100,7 +100,6 @@ var app = new Vue({
     }
 
 });
-
 /* ---------- Chat from chat.js file */
 // const express = require("express")
 // const appTwo = express()

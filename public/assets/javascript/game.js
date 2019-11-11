@@ -84,6 +84,13 @@ function draw() {
           bY + bird.height >= pipe[i].y + constant)) ||
       bY + bird.height >= cvs.height
     ) {
+      $.ajax({
+        method: "POST",
+        url: "/api/leaderboards",
+        data: {
+          player:  $("#player").val(),
+          score: score}
+      });
       location.reload(); // reload the page
     }
 
@@ -100,10 +107,17 @@ function draw() {
 
   ctx.fillStyle = "#ffffff";
   ctx.font = "20px Verdana";
-  ctx.fillText("Player : ", 10, cvs.height - 40);
+  ctx.fillText("Player : " + $("#player").val(), 10, cvs.height - 40);
   ctx.fillText("Score : " + score, 10, cvs.height - 20);
 
   requestAnimationFrame(draw);
 }
 
-draw();
+$("#canvas").hide();
+
+$("#start").on("click", function() {
+  $("#userInput").hide();
+  $("#canvas").show();
+  draw();
+
+})
