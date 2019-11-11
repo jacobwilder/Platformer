@@ -98,6 +98,7 @@ var app = new Vue({
             })
         })
     }
+
 });
 
 /* ---------- Chat from chat.js file */
