@@ -1,17 +1,39 @@
+body {
+  background: url('../images/spacebg.gif');
+  background-color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#canvas {
+  border: 1px solid black;
+  margin-top: 5px;
+}
+
+.navDiv {
+  background: transparent;
+}
+
+#app {
+  color: white;
+  margin-top: 1px;
+}
+
+#chatbox {
+  border: 1px solid black;
+}
+
+#leaderboard-container {
+  margin-top: 5px;
+}
+
 #chatbox {
   height: 200px;
   max-width: 400px;
   overflow-y: scroll;
 }
 
-#canvas {
-  background: url('https://im2.ezgif.com/tmp/ezgif-2-06ad090ef174.gif')
-}
-
-
 #leaderboard-container {
   width:100%;
-
 }
 
 #table-scroll {
