@@ -1,5 +1,6 @@
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
+var collided = false;
 
 // load images
 
@@ -42,8 +43,8 @@ document.addEventListener("keydown", moveUp);
 function moveUp(event) {
   var x = event.keyCode;
   if (x == 38) {
-  bY -= 35;
-  fly.play();
+    bY -= 35;
+    fly.play();
   }
 }
 
@@ -61,6 +62,7 @@ pipe[0] = {
 function draw() {
   ctx.drawImage(bg, 0, 0, 650, 512);
 
+
   for (var i = 0; i < pipe.length; i++) {
     constant = pipeNorth.height + gap;
     ctx.drawImage(pipeNorth, pipe[i].x, pipe[i].y);
@@ -77,21 +79,26 @@ function draw() {
 
     // detect collision
 
+
     if (
-      (bX + bird.width >= pipe[i].x &&
+      ((bX + bird.width >= pipe[i].x &&
         bX <= pipe[i].x + pipeNorth.width &&
         (bY <= pipe[i].y + pipeNorth.height ||
           bY + bird.height >= pipe[i].y + constant)) ||
-      bY + bird.height >= cvs.height
+      bY + bird.height >= cvs.height) && !collided
     ) {
+      collided = true;
       $.ajax({
         method: "POST",
         url: "/api/leaderboards",
         data: {
-          player:  $("#player").val(),
-          score: score}
-      });
-      location.reload(); // reload the page
+          player: $("#player").val(),
+          score: score
+        }
+      }).done(function () {
+
+        location.reload(); // reload the page
+      })
     }
 
     if (pipe[i].x == 5) {
@@ -114,7 +121,7 @@ function draw() {
 }
 
 
-$("#start").on("click", function() {
+$("#start").on("click", function () {
   $("#userInput").hide();
   draw();
 

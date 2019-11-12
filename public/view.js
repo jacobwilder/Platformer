@@ -7,7 +7,7 @@ $(document).ready(function () {
     // $(document).on("click", "#submitChat", submitChat);
 
 
-    getLeaderboards();
+    window.onload = getLeaderboards();
 
 
     function getLeaderboards() {
