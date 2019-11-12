@@ -13,8 +13,8 @@ var pipeSouth = new Image();
 bird.src = "assets/images/dino1.png";
 bg.src = "assets/images/ozp.gif";
 fg.src = "assets/images/fg.png";
-pipeNorth.src = "assets/images/pipenorth.png";
-pipeSouth.src = "assets/images/pipesouth.png";
+pipeNorth.src = "assets/images/satellite.png";
+pipeSouth.src = "assets/images/satellite.png";
 
 // some variables
 
@@ -29,13 +29,13 @@ var gravity = 1.5;
 var score = 0;
 
 // audio files
-
+var gameTheme = new Audio();
 var fly = new Audio();
 var scor = new Audio();
 
 fly.src = "assets/sounds/flap.mp3";
 scor.src = "assets/sounds/scoreup.wav";
-
+gameTheme.src = "assets/sounds/theme.wav";
 // on key down
 
 document.addEventListener("keydown", moveUp);
@@ -45,6 +45,8 @@ function moveUp(event) {
   if (x == 38) {
     bY -= 35;
     fly.play();
+    gameTheme.play();
+    gameTheme.loop();
   }
 }
 
@@ -61,6 +63,7 @@ pipe[0] = {
 
 function draw() {
   ctx.drawImage(bg, 0, 0, 650, 512);
+  ctx.clearRect(0,0,650,512);
 
 
   for (var i = 0; i < pipe.length; i++) {
