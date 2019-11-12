@@ -33,7 +33,9 @@ module.exports = function (app) {
     db.Leaderboards.update({
         score: req.body.score
       }, {
-        where: {player: req.body.player}
+        where: {
+          player: req.body.player
+        }
       })
       .then(function (dbLeaderboards) {
         res.json(dbLeaderboards)
