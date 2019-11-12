@@ -62,7 +62,6 @@ pipe[0] = {
 // draw images
 
 function draw() {
-  debugger;
   ctx.drawImage(bg, 0, 0, 650, 512);
   ctx.clearRect(0, 0, 650, 512);
 
