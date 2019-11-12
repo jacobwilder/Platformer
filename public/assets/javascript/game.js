@@ -63,7 +63,7 @@ pipe[0] = {
 
 function draw() {
   ctx.drawImage(bg, 0, 0, 650, 512);
-  ctx.clearRect(0,0,650,512);
+  ctx.clearRect(0, 0, 650, 512);
 
 
   for (var i = 0; i < pipe.length; i++) {
@@ -85,10 +85,10 @@ function draw() {
 
     if (
       ((bX + bird.width >= pipe[i].x &&
-        bX <= pipe[i].x + pipeNorth.width &&
-        (bY <= pipe[i].y + pipeNorth.height ||
-          bY + bird.height >= pipe[i].y + constant)) ||
-      bY + bird.height >= cvs.height) && !collided
+          bX <= pipe[i].x + pipeNorth.width &&
+          (bY <= pipe[i].y + pipeNorth.height ||
+            bY + bird.height >= pipe[i].y + constant)) ||
+        bY + bird.height >= cvs.height) && !collided
     ) {
       collided = true;
       $.ajax({
