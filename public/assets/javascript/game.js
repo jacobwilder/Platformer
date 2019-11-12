@@ -113,11 +113,9 @@ function draw() {
   requestAnimationFrame(draw);
 }
 
-$("#canvas").hide();
 
 $("#start").on("click", function() {
   $("#userInput").hide();
-  $("#canvas").show();
   draw();
 
 })
