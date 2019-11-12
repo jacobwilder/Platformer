@@ -1,8 +1,8 @@
 {
   "development": {
-    "username": "root",
-    "password": "26Gamers8!",
-    "database": "leaderboards_db",
+    "username": "obi6jgamd6csgmav",
+    "password": "qj6bysc4rlr1xjlm",
+    "database": "pik3n4azs9fvuv6a",
     "host": "127.0.0.1",
     "port": 3306,
     "dialect": "mysql"
