@@ -23,7 +23,7 @@ Dinos in Space is a side-scroller game where the player controls a dinosaur lost
 
 This project is deployed through [Heroku](https://www.heroku.com/home/) using [JAWSDB](https://www.jawsdb.com/) to implement the leaderboards database.
 
-You can use the application [here](https://secure-lowlands-84653.herokuapp.com/)
+[LIVE LINK](https://secure-lowlands-84653.herokuapp.com/)
 
 ## Built With
 
