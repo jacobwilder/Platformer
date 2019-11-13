@@ -11,6 +11,11 @@ body {
   margin-top: 5px;
 }
 
+#instructions {
+  color: white;
+  text-align: center;
+}
+
 .navDiv {
   background: transparent;
 }

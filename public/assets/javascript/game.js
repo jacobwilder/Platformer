@@ -1,6 +1,9 @@
 /* game logic written by Chris Mangin
   debugged by Jake, Chris, Kevin */
 
+/* theme song written and recorded by Chris
+  sprite animations and jump sound by Kevin */
+
 
 
 // getting canvas element from HTML
@@ -81,9 +84,11 @@ pipe[0] = {
 function draw() {
 
   // draws background image/transparent layer
-
+bg.onload = function () {
   ctx.drawImage(bg, 0, 0, 650, 512);
-  ctx.clearRect(0, 0, 650, 512);
+}
+ctx.clearRect(0, 0, 650, 512);
+  
 
   // for loop to draw pipe positions
 
