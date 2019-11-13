@@ -98,7 +98,7 @@ var app = new Vue({
         }
     },
     created: function () {
-        socket = io('http://localhost:8080');
+        socket = io();
     },
     mounted: function () {
         socket.on("message", function (message) {
