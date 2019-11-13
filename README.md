@@ -2,7 +2,7 @@
 
 Dinos in Space
 
-![image](mdGif.gif)
+![image](/public/assets/images/mdGif.gif)
 
 ## Description
 
