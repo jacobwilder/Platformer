@@ -1,3 +1,5 @@
+// sequelize initialization written b Jake Wilder
+
 "use strict";
 
 var fs = require("fs");

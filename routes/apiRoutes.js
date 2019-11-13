@@ -1,3 +1,5 @@
+// api routes written by Jake Wilder
+
 var db = require("../models");
 var sequelize = require("sequelize");
 

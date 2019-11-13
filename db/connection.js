@@ -1,8 +1,12 @@
+/* Database logic written by Jake Wilder */
+
 var mysql = require("mysql");
 var dotenv = require("dotenv");
 var connection;
 
 dotenv.config();
+
+// mysql database connection block
 
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);

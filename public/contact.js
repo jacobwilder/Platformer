@@ -1,3 +1,6 @@
+// contact logic written by Kate
+
+
 console.log("Hello");
 function deferVideo() {
   //defer html5 video loading

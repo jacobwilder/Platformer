@@ -1,15 +1,19 @@
-$(document).ready(function () {
+
+/* Database/ORM front end written by Jake Wilder
+    debugged by Jake & Kevin */
+
+    $(document).ready(function () {
     var $newChatInput = $("#chatInput");
     var $scoreContainer = $("#score");
     var $playerInput = $("#player").val();
     var $playerScore = $("#playerScore");
 
-    // $(document).on("click", "#submitChat", submitChat);
 
 
     window.onload = getLeaderboards();
 
-
+    // GET request function to pull leaderboards table data
+    
     function getLeaderboards() {
         console.log('getLeaderboards()');
         $.get("/api/leaderboards", function (data) {
@@ -18,13 +22,17 @@ $(document).ready(function () {
         });
     }
 
+    // dynamic table function
+    
     function initializeTable(leaderboards) {
         console.log('initializeTable()');
         $("#score").empty();
         console.log(leaderboards);
 
+        // for loop to create and populate new table rows
         
         for (var i = 0; i < leaderboards.length; i++) {
+            
             //createNewRow(leaderboards[i]);
             
             var $newInputRow = 
@@ -46,6 +54,7 @@ $(document).ready(function () {
     //function createNewRow(leaderboards) {
     //}
 
+    // pushes player data to database
     function insertLeaderboards(event) {
         console.log('insertLeaderboards()');
         event.preventDefault();
@@ -61,7 +70,9 @@ $(document).ready(function () {
 
 
 
-/* ---------- Chat Room ---------- */
+/* ---------- Chat Room ---------- 
+    code written by Kevin Darcy */
+
 var socket = null;
 var app = new Vue({
     el: "#app",
@@ -100,6 +111,7 @@ var app = new Vue({
     }
 
 });
+
 /* ---------- Chat from chat.js file */
 // const express = require("express")
 // const appTwo = express()
