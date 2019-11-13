@@ -2,7 +2,7 @@
 
 Dinos in Space
 
-![image](https://steemitimages.com/p/cyxkESqYz3dhcAZnfueBbAJYLgwJQyDNA7TWHyu6zQsVykaLBuHQpKvXgrAGePUXa4advvFWt1K5NBQeKDbvbH74DZrp9f7zJxtMES6kzMMVwaSKv2UJ87BWNtPVkndChqG?format=match&mode=fit&width=640)
+![image](Dinos in Space_Trim.gif)
 
 ## Description
 
