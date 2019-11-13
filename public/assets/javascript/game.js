@@ -38,7 +38,7 @@ var bY = 150;
 
 // Affects fall speed/jump height
 
-var gravity = 1.5;
+var gravity = 0;
 
 var score = 0;
 
@@ -63,6 +63,7 @@ document.addEventListener("keydown", moveUp);
 function moveUp(event) {
   var x = event.keyCode;
   if (x == 38) {
+    gravity = 1.5;
     bY -= 35;
     fly.play();
     gameTheme.play();
@@ -130,7 +131,6 @@ ctx.clearRect(0, 0, 650, 512);
           score: score
         }
       }).done(function () {
-
         location.reload(); // reload the page
       })
     }
